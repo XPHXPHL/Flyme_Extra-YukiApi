@@ -13,4 +13,4 @@ sweetProperty {
     rootProject { all { isEnable = false } }
 }
 rootProject.name = "FlymeExtra"
-include(":app")
+include(":app",":blockmiui")
