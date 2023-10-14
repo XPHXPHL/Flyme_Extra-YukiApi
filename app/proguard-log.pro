@@ -21,7 +21,7 @@
     public static void checkFieldIsNotNull(java.lang.Object, java.lang.String);
     public static void checkFieldIsNotNull(java.lang.Object, java.lang.String, java.lang.String);
     public static void checkNotNull(java.lang.Object);
-    public static void checkNotNul l(java.lang.Object, java.lang.String);
+    public static void checkNotNull(java.lang.Object, java.lang.String);
     public static void checkNotNullExpressionValue(java.lang.Object, java.lang.String);
     public static void checkNotNullParameter(java.lang.Object, java.lang.String);
     public static void checkParameterIsNotNull(java.lang.Object, java.lang.String);
