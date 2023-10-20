@@ -17,7 +17,7 @@ object FingerprintVibrator : YukiBaseHooker() {
                 }
             }.result {
                 onAllFailure {
-                    YLog.error(msg = "${it.message}", tag = tag)
+                    YLog.error(tag = tag, e = it)
                 }
             }
     }
