@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">FlymeExtra</string>
-    <string name="xposed_desc">Make Flyme Great! @XiaoPoHai</string>
+    <string name="xposed_desc">Make Flyme Great! @XiaoPoHai.</string>
+
+    <string name="tips">Tips</string>
+    <string name="not_support">The module is not activated, please activate the module and try again.</string>
+    <string name="hide_desktop_icon">Hide desktop icon</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="menu">Menu</string>
+    <string name="reboot_system">Reboot system</string>
+    <string name="reboot_system_summary">Are you sure you want to restart the system?</string>
+    <string name="restart_scope">Area of action</string>
+    <string name="restart_scope_summary">Determine all important areas of action?</string>
+    <string name="restart_scope_finished">Completion of action area.</string>
+    <string name="backup">Placement of mock-up</string>
+    <string name="recovery">Replacement design</string>
+    <string name="module_build_time">Module build time</string>
+    <string name="module_debug_mode">Debug Mode</string>
+    <string name="module_debug_mode_summary">Used to provide module logs to developers.</string>
 </resources>
