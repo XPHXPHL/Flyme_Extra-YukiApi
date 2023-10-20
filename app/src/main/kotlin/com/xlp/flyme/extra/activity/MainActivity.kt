@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import cn.fkj233.ui.activity.MIUIActivity
 import cn.fkj233.ui.dialog.MIUIDialog
-import com.highcapable.yukihookapi.YukiHookAPI
 import com.xlp.flyme.extra.R
 import com.xlp.flyme.extra.activity.pages.MainPage
 import com.xlp.flyme.extra.activity.pages.MenuPage
@@ -20,9 +19,13 @@ class MainActivity : MIUIActivity() {
         super.onCreate(savedInstanceState)
     }
 
+    @SuppressLint("WorldReadableFiles")
+    @Suppress("DEPRECATION")
     private fun checkLSPosed() {
-        setSP(getSharedPreferences("Flyme-Extra_Config", MODE_WORLD_READABLE))
-        if (!YukiHookAPI.Status.isModuleActive) {
+        try {
+            setSP(getSharedPreferences("Flyme-Extra_Config", MODE_WORLD_READABLE))
+        } catch (exception: SecurityException) {
+            isLoad = false
             MIUIDialog(this) {
                 setTitle(R.string.tips)
                 setMessage(R.string.not_support)
@@ -33,6 +36,7 @@ class MainActivity : MIUIActivity() {
             }.show()
         }
     }
+
 
     init {
         activity = this
