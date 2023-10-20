@@ -100,7 +100,7 @@ class MenuPage : BasePage() {
         })
         Line()
         TextSummary(
-            textId = R.string.module_build_time,
+            textId = R.string.module_build_version,
             tips = "${BuildConfig.VERSION_NAME}-${BuildConfig.BUILD_TYPE}"
         )
         val buildTime =
