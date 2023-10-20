@@ -17,6 +17,5 @@
     <string name="backup">Placement of mock-up</string>
     <string name="recovery">Replacement design</string>
     <string name="module_build_time">Module build time</string>
-    <string name="module_debug_mode">Debug Mode</string>
-    <string name="module_debug_mode_summary">Used to provide module logs to developers.</string>
+    <string name="module_build_version">Module version</string>
 </resources>
