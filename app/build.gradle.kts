@@ -9,6 +9,12 @@ plugins {
 }
 
 android {
+
+    androidResources.additionalParameters += listOf(
+        "--allow-reserved-package-id",
+        "--package-id",
+        "0x64"
+    )
     val buildTime = System.currentTimeMillis()
     namespace = property.project.app.packageName
     compileSdk = property.project.android.compileSdk
@@ -50,6 +56,13 @@ android {
             if (keystorePath != null) signingConfig = signingConfigs.getByName("release")
         }
         debug {
+            isShrinkResources = true
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+                "proguard-log.pro"
+            )
             if (keystorePath != null) signingConfig = signingConfigs.getByName("release")
         }
     }
@@ -117,6 +130,7 @@ fun getGitCommitCount(): Int {
 }
 
 dependencies {
+    implementation(project(":blockmiui"))
     compileOnly(de.robv.android.xposed.api)
     implementation(com.highcapable.yukihookapi.api)
     ksp(com.highcapable.yukihookapi.ksp.xposed)
