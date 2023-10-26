@@ -5,14 +5,23 @@ import android.app.AndroidAppHelper
 import android.app.Service
 import android.os.VibrationEffect
 import android.os.Vibrator
+import cn.fkj233.ui.activity.MIUIActivity
 import java.io.DataOutputStream
 
 @SuppressLint("WrongConstant", "NewApi")
 object XUtils {
+    @Suppress("DEPRECATION")
     fun vibratorHelper(effectId: Int) {
         val mVibrator =
             AndroidAppHelper.currentApplication().applicationContext.getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
         mVibrator.vibrate(VibrationEffect.createPredefined(effectId))
+    }
+    @Suppress("DEPRECATION")
+    @SuppressLint("ServiceCast")
+    fun perfVibratorHelper(effectId: Int){
+        val mVibrator = MIUIActivity.context.applicationContext.getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
+        mVibrator.vibrate(VibrationEffect.createPredefined(effectId))
+
     }
 
     fun execShell(command: String) {
