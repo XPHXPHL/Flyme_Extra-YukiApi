@@ -5,20 +5,26 @@ import com.highcapable.yukihookapi.hook.factory.method
 import com.highcapable.yukihookapi.hook.log.YLog
 import com.highcapable.yukihookapi.hook.log.YLog.Configs.tag
 import com.xlp.flyme.extra.utils.XUtils
+import com.xlp.flyme.extra.utils.getBoolean
+import com.xlp.flyme.extra.utils.getInt
 
 object BackVibrator : YukiBaseHooker() {
     override fun onHook() {
-        "com.flyme.systemui.navigationbar.gestural.EdgeBackView".toClass()
-            .method {
-                name = "triggerBack"
-            }.hook {
-                after {
-                    XUtils.vibratorHelper(31021)
+        if (getBoolean("vibrator_back", false)) {
+            "com.flyme.systemui.navigationbar.gestural.EdgeBackView".toClass()
+                .method {
+                    name = "triggerBack"
+                }.hook {
+                    after {
+                        val effectId = getInt("vibrator_effect_id_back", 31021)
+                        XUtils.vibratorHelper(effectId)
+                        YLog.debug(tag = tag, msg = "Back vibrator effectID is $effectId")
+                    }
+                }.result {
+                    onAllFailure {
+                        YLog.error(tag = tag, e = it)
+                    }
                 }
-            }.result {
-                onAllFailure {
-                    YLog.error(tag = tag, e = it)
-                }
-            }
+        }
     }
 }

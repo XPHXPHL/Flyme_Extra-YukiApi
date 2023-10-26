@@ -5,20 +5,26 @@ import com.highcapable.yukihookapi.hook.factory.method
 import com.highcapable.yukihookapi.hook.log.YLog
 import com.highcapable.yukihookapi.hook.log.YLog.Configs.tag
 import com.xlp.flyme.extra.utils.XUtils
+import com.xlp.flyme.extra.utils.getBoolean
+import com.xlp.flyme.extra.utils.getInt
 
 object FaceVibrator : YukiBaseHooker() {
     override fun onHook() {
-        "com.flyme.systemui.facerecognition.FaceRecognitionAnimationView".toClass()
-            .method {
-                name = "startSuccessAnimation"
-            }.hook {
-                after {
-                    XUtils.vibratorHelper(31021)
+        if (getBoolean("vibrator_face", false)) {
+            "com.flyme.systemui.facerecognition.FaceRecognitionAnimationView".toClass()
+                .method {
+                    name = "startSuccessAnimation"
+                }.hook {
+                    after {
+                        val effectId = getInt("vibrator_effect_id_face", 31021)
+                        XUtils.vibratorHelper(effectId)
+                        YLog.debug(tag = tag, msg = "Face vibrator effectID is $effectId")
+                    }
+                }.result {
+                    onAllFailure {
+                        YLog.error(tag = tag, e = it)
+                    }
                 }
-            }.result {
-                onAllFailure {
-                    YLog.error(tag = tag, e = it)
-                }
-            }
+        }
     }
 }
