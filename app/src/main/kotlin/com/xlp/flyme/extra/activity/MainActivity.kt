@@ -8,6 +8,7 @@ import cn.fkj233.ui.dialog.MIUIDialog
 import com.xlp.flyme.extra.R
 import com.xlp.flyme.extra.activity.pages.MainPage
 import com.xlp.flyme.extra.activity.pages.MenuPage
+import com.xlp.flyme.extra.activity.pages.VibratorPage
 import com.xlp.flyme.extra.utils.BackupUtils
 import kotlin.system.exitProcess
 
@@ -42,6 +43,7 @@ class MainActivity : MIUIActivity() {
         activity = this
         registerPage(MenuPage::class.java)
         registerPage(MainPage::class.java)
+        registerPage(VibratorPage::class.java)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
