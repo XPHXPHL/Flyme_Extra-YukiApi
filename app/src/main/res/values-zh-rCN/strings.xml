@@ -8,6 +8,9 @@
     <string name="hide_desktop_icon">隐藏桌面图标</string>
     <string name="done">确定</string>
     <string name="cancel">取消</string>
+    <string name="def">默认</string>
+    <string name="current">当前值</string>
+    <string name="warn">输入有误请重新输入</string>
 
     <string name="menu">菜单</string>
     <string name="reboot_system">重启系统</string>
@@ -19,4 +22,16 @@
     <string name="recovery">恢复模块设置</string>
     <string name="module_build_time">模块构造时间</string>
     <string name="module_build_version">模块版本</string>
+
+    <string name="vibrator_page">震动页面</string>
+    <string name="vibrator_effect">EffectID测试</string>
+    <string name="vibrator_back">返回震动</string>
+    <string name="vibrator_back_summary">执行返回手势触发线性震动反馈。</string>
+    <string name="vibrator_effect_back">返回震动EffectID自定义</string>
+    <string name="vibrator_face">人脸解锁成功震动</string>
+    <string name="vibrator_face_summary">人脸解锁成功时触发线性震动反馈。</string>
+    <string name="vibrator_effect_face">人脸解锁成功震动EffectID自定义</string>
+    <string name="vibrator_fingerprint">指纹解锁成功震动</string>
+    <string name="vibrator_fingerprint_summary">指纹解锁成功时触发线性震动反馈。</string>
+    <string name="vibrator_effect_fingerprint">指纹解锁成功震动EffectID自定义</string>
 </resources>

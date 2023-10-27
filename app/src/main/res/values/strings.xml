@@ -7,6 +7,9 @@
     <string name="hide_desktop_icon">Hide desktop icon</string>
     <string name="done">Done</string>
     <string name="cancel">Cancel</string>
+    <string name="def">Default</string>
+    <string name="current">Current</string>
+    <string name="warn">Incorrect input please re-enter.</string>
 
     <string name="menu">Menu</string>
     <string name="reboot_system">Reboot system</string>
@@ -18,4 +21,16 @@
     <string name="recovery">Replacement design</string>
     <string name="module_build_time">Module build time</string>
     <string name="module_build_version">Module version</string>
+
+    <string name="vibrator_page">Vibrant Page</string>
+    <string name="vibrator_effect">EffectID Test</string>
+    <string name="vibrator_back">Back vibrator</string>
+    <string name="vibrator_back_summary">Performing a return gesture triggers linear vibration feedback.</string>
+    <string name="vibrator_effect_back">Back vibrator effectID customization</string>
+    <string name="vibrator_face">Face unlock vibrator</string>
+    <string name="vibrator_face_summary">Linear vibration feedback is triggered when face unlock is successful.</string>
+    <string name="vibrator_effect_face">Face unlock vibrator effectID customization</string>
+    <string name="vibrator_fingerprint">Fingerprint unlock vibrator</string>
+    <string name="vibrator_fingerprint_summary">Linear vibration feedback is triggered when fingerprint unlocking is successful.</string>
+    <string name="vibrator_effect_fingerprint">Fingerprint unlock vibrator effectID customization</string>
 </resources>
