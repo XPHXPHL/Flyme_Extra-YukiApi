@@ -13,17 +13,14 @@ object BackVibrator : YukiBaseHooker() {
         if (getBoolean("vibrator_back", false)) {
             "com.flyme.systemui.navigationbar.gestural.EdgeBackView".toClass()
                 .method {
-                    name = "triggerBack"
+                    name = "triggerBackBN"
                 }.hook {
                     after {
                         val effectId = getInt("vibrator_effect_id_back", 31021)
                         XUtils.vibratorHelper(effectId)
-                        YLog.debug(tag = tag, msg = "Back vibrator effectID is $effectId")
                     }
-                }.result {
-                    onAllFailure {
-                        YLog.error(tag = tag, e = it)
-                    }
+                }.onAllFailure {
+                    YLog.error(tag = tag, e = it)
                 }
         }
     }

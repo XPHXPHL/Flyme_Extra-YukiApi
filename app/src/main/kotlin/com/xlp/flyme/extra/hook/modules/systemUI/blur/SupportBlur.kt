@@ -13,10 +13,8 @@ object SupportBlur : YukiBaseHooker() {
                     name = "isSupportBlur"
                 }.hook {
                     replaceToTrue()
-                }.result {
-                    onAllFailure {
-                        YLog.error(tag = tag, e = it)
-                    }
+                }.onAllFailure {
+                    YLog.error(tag = tag, e = it)
                 }
         }
 

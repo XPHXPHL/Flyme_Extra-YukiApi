@@ -18,12 +18,9 @@ object FingerprintVibrator : YukiBaseHooker() {
                     after {
                         val effectId = getInt("vibrator_effect_id_fingerprint", 31021)
                         XUtils.vibratorHelper(effectId)
-                        YLog.debug(tag = tag, msg = "Fingerprint vibrator effectID is $effectId")
                     }
-                }.result {
-                    onAllFailure {
-                        YLog.error(tag = tag, e = it)
-                    }
+                }.onAllFailure {
+                    YLog.error(tag = tag, e = it)
                 }
         }
     }

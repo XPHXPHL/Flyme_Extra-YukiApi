@@ -18,12 +18,9 @@ object FaceVibrator : YukiBaseHooker() {
                     after {
                         val effectId = getInt("vibrator_effect_id_face", 31021)
                         XUtils.vibratorHelper(effectId)
-                        YLog.debug(tag = tag, msg = "Face vibrator effectID is $effectId")
                     }
-                }.result {
-                    onAllFailure {
-                        YLog.error(tag = tag, e = it)
-                    }
+                }.onAllFailure {
+                    YLog.error(tag = tag, e = it)
                 }
         }
     }
