@@ -26,13 +26,13 @@ class HookEntry : IYukiHookXposedInit {
 
     @SuppressLint("SdCardPath")
     override fun onHook() = encase {
-        loadApp(
-            name = "com.android.systemui",
-            SupportBlur,
-            BackVibrator,
-            FaceVibrator,
-            FingerprintVibrator
-        )
-          YLog.saveToFile("/sdcard/Documents/YukiApi-Flyme_Extra-Debug_Log.log")
+        loadApp(name = "com.android.systemui"){
+            loadHooker(SupportBlur)
+            loadHooker(BackVibrator)
+            loadHooker(FaceVibrator)
+            loadHooker(FingerprintVibrator)
+        }
+        YLog.saveToFile("/sdcard/Documents/YukiApi-Flyme_Extra-Debug_Log.log")
     }
+
 }
