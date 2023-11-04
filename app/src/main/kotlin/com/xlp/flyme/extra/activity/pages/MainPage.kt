@@ -16,5 +16,14 @@ class MainPage : BasePage() {
                 showFragment("VibratorPage")
             }
         )
+
+        Page(
+            this.getDrawable(R.drawable.ic_launcher_background),
+            TextSummaryV(textId = R.string.systemui_page),
+            round = 8f,
+            onClickListener = {
+                showFragment("SystemUiPage")
+            }
+        )
     }
 }
