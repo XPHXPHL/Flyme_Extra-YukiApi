@@ -33,4 +33,13 @@
     <string name="vibrator_fingerprint">Fingerprint unlock vibrator</string>
     <string name="vibrator_fingerprint_summary">Linear vibration feedback is triggered when fingerprint unlocking is successful.</string>
     <string name="vibrator_effect_fingerprint">Fingerprint unlock vibrator effectID customization</string>
+
+    <string name="systemui_page">SystemUI Page</string>
+    <string name="blur_enabled">Blurred notifications</string>
+    <string name="blur_enabled_summary">Restore castrated notification center blur for non-Meizu 20/20Pro users.</string>
+    <string name="clock_seconds">Time display seconds</string>
+    <string name="clock_seconds_summary">Enable the HH::MM::SS display style for the status bar time.<font color="red">\nNeed Root.</font></string>,
+    <string name="app_shade">Software startup mask</string>
+    <string name="app_shade_summary">Restore the native mask function of the application.</string>
+
 </resources>
