@@ -20,20 +20,12 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
-# FreeReflection
--keep class me.weishu.reflection.** {*;}
-
 -assumenosideeffects class kotlin.jvm.internal.Intrinsics {
     public static *** throwUninitializedProperty(...);
     public static *** throwUninitializedPropertyAccessException(...);
 }
 
--keepclassmembers class * implements androidx.viewbinding.ViewBinding {
-    *** inflate(android.view.LayoutInflater);
-}
-
--keep class * extends android.app.Activity
--keep class * implements androidx.viewbinding.ViewBinding {
-    <init>();
-    *** inflate(android.view.LayoutInflater);
-}
+-optimizationpasses 7
+-dontpreverify
+-allowaccessmodification
+-overloadaggressively

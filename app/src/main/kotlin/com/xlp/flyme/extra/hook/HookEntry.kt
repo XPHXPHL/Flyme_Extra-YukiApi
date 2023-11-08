@@ -30,14 +30,14 @@ class HookEntry : IYukiHookXposedInit {
 
     @SuppressLint("SdCardPath")
     override fun onHook() = encase {
-        loadApp(name = "com.android.systemui"){
+        loadApp(name = "com.android.systemui") {
             loadHooker(SupportBlur)
             loadHooker(BackVibrator)
             loadHooker(FaceVibrator)
             loadHooker(FingerprintVibrator)
             loadHooker(AppShade)
         }
-        loadApp(name = "com.flyme.systemuiex"){
+        loadApp(name = "com.flyme.systemuiex") {
             loadHooker(ForcedScreenCapture2)
         }
         loadApp(name = "android") {

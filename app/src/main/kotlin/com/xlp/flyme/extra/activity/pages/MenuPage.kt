@@ -19,7 +19,6 @@ import com.xlp.flyme.extra.utils.XUtils.execShell
 import java.text.SimpleDateFormat
 import java.util.Locale
 
-
 @BMMenuPage
 class MenuPage : BasePage() {
     override fun getTitle(): String {

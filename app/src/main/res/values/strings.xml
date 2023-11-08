@@ -38,7 +38,8 @@
     <string name="blur_enabled">Blurred notifications</string>
     <string name="blur_enabled_summary">Restore castrated notification center blur for non-Meizu 20/20Pro users.</string>
     <string name="clock_seconds">Time display seconds</string>
-    <string name="clock_seconds_summary">Enable the HH::MM::SS display style for the status bar time.<font color="red">\nNeed Root.</font></string>,
+    <string name="clock_seconds_summary">Enable the HH::MM::SS display style for the status bar time.<font color="red">\nNeed Root.</font></string>
+    ,
     <string name="app_shade">Software startup mask</string>
     <string name="app_shade_summary">Restore the native mask function of the application.</string>
 

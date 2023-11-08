@@ -10,11 +10,6 @@ plugins {
 
 android {
 
-    androidResources.additionalParameters += listOf(
-        "--allow-reserved-package-id",
-        "--package-id",
-        "0x64"
-    )
     val buildTime = System.currentTimeMillis()
     namespace = property.project.app.packageName
     compileSdk = property.project.android.compileSdk
@@ -48,26 +43,15 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro",
-                "proguard-log.pro"
-            )
+            proguardFiles("proguard-rules.pro", "proguard-log.pro")
             if (keystorePath != null) signingConfig = signingConfigs.getByName("release")
         }
         debug {
-            isShrinkResources = true
-            isMinifyEnabled = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro",
-                "proguard-log.pro"
-            )
             if (keystorePath != null) signingConfig = signingConfigs.getByName("release")
         }
     }
     androidResources {
-        additionalParameters += arrayOf("--allow-reserved-package-id", "--package-id", "0x67")
+        additionalParameters += arrayOf("--allow-reserved-package-id", "--package-id", "0x64")
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -76,9 +60,7 @@ android {
     kotlinOptions {
         jvmTarget = "17"
         freeCompilerArgs = listOf(
-            "-Xno-param-assertions",
-            "-Xno-call-assertions",
-            "-Xno-receiver-assertions"
+            "-Xno-param-assertions", "-Xno-call-assertions", "-Xno-receiver-assertions"
         )
     }
     packaging {
@@ -90,13 +72,11 @@ android {
         }
         applicationVariants.all {
             outputs.all {
-                (this as BaseVariantOutputImpl).outputFileName =
-                    "FlymeExtra-$versionName($versionCode)-$name-$buildTime.apk"
+                (this as BaseVariantOutputImpl).outputFileName = "FlymeExtra-$versionName($versionCode)-$name-$buildTime.apk"
             }
         }
     }
     buildFeatures {
-        buildConfig = true
         viewBinding = true
     }
     lint { checkReleaseBuilds = false }
@@ -130,10 +110,8 @@ fun getGitCommitCount(): Int {
 }
 
 dependencies {
-    implementation(project(":blockmiui"))
     compileOnly(de.robv.android.xposed.api)
+    implementation(project(":blockmiui"))
     implementation(com.highcapable.yukihookapi.api)
     ksp(com.highcapable.yukihookapi.ksp.xposed)
-    implementation(androidx.core.core.ktx)
-    testImplementation(junit.junit)
 }

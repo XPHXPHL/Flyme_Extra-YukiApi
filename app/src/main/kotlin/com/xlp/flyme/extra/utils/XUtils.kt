@@ -12,13 +12,13 @@ import java.io.DataOutputStream
 object XUtils {
     @Suppress("DEPRECATION")
     fun vibratorHelper(effectId: Int) {
-        val mVibrator =
-            AndroidAppHelper.currentApplication().applicationContext.getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
+        val mVibrator = AndroidAppHelper.currentApplication().applicationContext.getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
         mVibrator.vibrate(VibrationEffect.createPredefined(effectId))
     }
+
     @Suppress("DEPRECATION")
     @SuppressLint("ServiceCast")
-    fun perfVibratorHelper(effectId: Int){
+    fun perfVibratorHelper(effectId: Int) {
         val mVibrator = MIUIActivity.context.applicationContext.getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
         mVibrator.vibrate(VibrationEffect.createPredefined(effectId))
 

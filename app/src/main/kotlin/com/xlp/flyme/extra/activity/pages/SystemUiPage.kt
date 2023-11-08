@@ -8,7 +8,7 @@ import com.xlp.flyme.extra.R
 import com.xlp.flyme.extra.utils.XUtils.execShell
 
 @BMPage("SystemUiPage", hideMenu = false)
-class SystemUiPage:BasePage() {
+class SystemUiPage : BasePage() {
     override fun getTitle(): String {
         setTitle(getString(R.string.systemui_page))
         return getString(R.string.systemui_page)
@@ -22,9 +22,9 @@ class SystemUiPage:BasePage() {
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.clock_seconds, tipsId = R.string.clock_seconds_summary),
             SwitchV("clock_seconds", onClickListener = {
-                if (it){
+                if (it) {
                     execShell("settings put secure clock_seconds 1")
-                }else{
+                } else {
                     execShell("settings put secure clock_seconds 0")
                 }
             })
