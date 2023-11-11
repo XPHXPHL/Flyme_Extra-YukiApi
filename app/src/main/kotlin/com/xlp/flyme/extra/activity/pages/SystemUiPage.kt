@@ -20,6 +20,14 @@ class SystemUiPage : BasePage() {
             SwitchV("blur_enabled")
         )
         TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.app_shade, tipsId = R.string.app_shade_summary),
+            SwitchV("app_shade")
+        )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.clipboard_editor, tipsId = R.string.clipboard_editor_summary),
+            SwitchV("clipboard_editor")
+        )
+        TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.clock_seconds, tipsId = R.string.clock_seconds_summary),
             SwitchV("clock_seconds", onClickListener = {
                 if (it) {
@@ -28,10 +36,6 @@ class SystemUiPage : BasePage() {
                     execShell("settings put secure clock_seconds 0")
                 }
             })
-        )
-        TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.app_shade, tipsId = R.string.app_shade_summary),
-            SwitchV("app_shade")
         )
     }
 }
