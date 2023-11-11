@@ -1,23 +1,23 @@
-package com.xlp.flyme.extra.hook.modules.systemUI.vibrator.back
+package com.xlp.flyme.extra.hook.modules.settings.hideIMEI
 
 import com.highcapable.yukihookapi.hook.entity.YukiBaseHooker
 import com.highcapable.yukihookapi.hook.factory.method
 import com.highcapable.yukihookapi.hook.log.YLog
 import com.highcapable.yukihookapi.hook.log.YLog.Configs.tag
-import com.xlp.flyme.extra.utils.XUtils
 import com.xlp.flyme.extra.utils.getBoolean
-import com.xlp.flyme.extra.utils.getInt
 
-object BackVibrator : YukiBaseHooker() {
+object HideIMEI : YukiBaseHooker() {
     override fun onHook() {
-        if (getBoolean("vibrator_back", false)) {
-            "com.flyme.systemui.navigationbar.gestural.EdgeBackView".toClass()
+        if (getBoolean("hide_imei_sn", false)) {
+            "com.meizu.settings.utils.MzUtils".toClass()
                 .method {
-                    name = "triggerBack"
+                    name = "getImei"
                 }.hook {
                     after {
-                        val effectId = getInt("vibrator_effect_id_back", 31021)
-                        XUtils.vibratorHelper(effectId)
+                        val imei = this.result.toString().split(',')
+                        val hideIMEI =
+                            imei.joinToString(",") { it.take(5) + "*".repeat(it.length - 3) }
+                        this.result = hideIMEI
                     }
                 }.onAllFailure {
                     YLog.error(tag = tag, e = it)
