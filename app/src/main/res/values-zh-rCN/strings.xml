@@ -42,4 +42,19 @@
     <string name="clock_seconds_summary">为状态栏时间开启HH::MM::SS显示样式。<font color="red">\n需要Root权限</font></string>
     <string name="app_shade">软件启动遮罩</string>
     <string name="app_shade_summary">还原原生开启应用的遮罩功能。</string>
+    <string name="clipboard_editor">剪切板编辑器</string>
+    <string name="clipboard_editor_summary">还原原生的剪切板编辑器。</string>
+
+    <string name="settings_page">设置界面</string>
+    <string name="cipher_disk_vibrator">密码盘震动</string>
+    <string name="cipher_disk_vibrator_summary">为设置->添加密码->输入密码添加线性震动。</string>
+
+    <string name="android_page">系统框架</string>
+    <string name="android_page_summary"><font color="red">本页功能开启以后需要重启手机。</font></string>
+    <string name="forced_screen_capture">强制截图</string>
+    <string name="forced_screen_capture_summary">使某些场景允许进行截屏操作。</string>
+    <string name="unlock_game_fps">解除游戏锁帧</string>
+    <string name="unlock_game_fps_summary">为非魅族20/Pro的魅族用户去除游戏锁60FPS的限制。</string>
+    <string name="press_unlock">按压指纹按键解锁</string>
+    <string name="press_unlock_summary">类似于MIUI按压指纹按键才能进行解锁。</string>
 </resources>
