@@ -63,6 +63,7 @@ class MainPage : BasePage() {
         TextSummaryWithSwitch(TextSummaryV(textId = R.string.clipboard_editor), SwitchV("clipboard_editor"))
         TextSummaryWithSwitch(TextSummaryV(textId = R.string.press_unlock), SwitchV("press_unlock"))
         TextSummaryWithSwitch(TextSummaryV(textId = R.string.cipher_disk_vibrator), SwitchV("cipher_disk_vibrator"))
+        TextSummaryWithSwitch(TextSummaryV(textId = R.string.hide_imei_sn), SwitchV("hide_imei_sn"))
         viewToInput(perfKey = "vibrator_face", effectKey = "vibrator_effect_id_face", textSummaryWithSwitchTextId = R.string.vibrator_face, textSummaryVTextId = R.string.vibrator_effect_face, setTitle = R.string.vibrator_effect_face)
         viewToInput(perfKey = "vibrator_fingerprint", effectKey = "vibrator_effect_id_fingerprint", textSummaryWithSwitchTextId = R.string.vibrator_fingerprint, textSummaryVTextId = R.string.vibrator_effect_fingerprint, setTitle = R.string.vibrator_effect_fingerprint)
         viewToInput(perfKey = "vibrator_back", effectKey = "vibrator_effect_id_back", textSummaryWithSwitchTextId = R.string.vibrator_back, textSummaryVTextId = R.string.vibrator_effect_back, setTitle = R.string.vibrator_effect_back)
