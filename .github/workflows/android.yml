@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ "NewView" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "NewView" ]
+    branches: [ "master" ]
   schedule:
     - cron: "0 0 */7 * *"
   workflow_dispatch:

@@ -25,24 +25,35 @@
     <string name="vibrator_page">Vibrant Page</string>
     <string name="vibrator_effect">EffectID Test</string>
     <string name="vibrator_back">Back vibrator</string>
+    <string name="vibrator_back_summary">Performing a return gesture triggers linear vibration feedback.</string>
     <string name="vibrator_effect_back">Back vibrator effectID customization</string>
     <string name="vibrator_face">Face unlock vibrator</string>
+    <string name="vibrator_face_summary">Linear vibration feedback is triggered when face unlock is successful.</string>
     <string name="vibrator_effect_face">Face unlock vibrator effectID customization</string>
     <string name="vibrator_fingerprint">Fingerprint unlock vibrator</string>
+    <string name="vibrator_fingerprint_summary">Linear vibration feedback is triggered when fingerprint unlocking is successful.</string>
     <string name="vibrator_effect_fingerprint">Fingerprint unlock vibrator effectID customization</string>
 
     <string name="systemui_page">SystemUI Page</string>
     <string name="blur_enabled">Blurred notifications</string>
+    <string name="blur_enabled_summary">Restore castrated notification center blur for non-Meizu 20/20Pro users.</string>
     <string name="clock_seconds">Time display seconds</string>
-      <string name="app_shade">Software startup mask</string>
+    <string name="clock_seconds_summary">Enable the HH::MM::SS display style for the status bar time.<font color="red">\nNeed Root.</font></string>
+    <string name="app_shade">Software startup mask</string>
+    <string name="app_shade_summary">Restore the native mask function of the application.</string>
     <string name="clipboard_editor">Clipboard editor</string>
+    <string name="clipboard_editor_summary">Restore the native clipboard editor.</string>
 
     <string name="settings_page">Settings Page</string>
     <string name="cipher_disk_vibrator">Password disk vibrates</string>
-    <string name="hide_imei_sn">Hide IMEI and Sn</string>
+    <string name="cipher_disk_vibrator_summary">Added linear vibration to Settings->Add Password->Enter Password.</string>
 
     <string name="android_page">Android Pages</string>
+    <string name="android_page_summary"><font color="red">After the function of this page is enabled, the phone needs to be restarted.</font></string>
     <string name="forced_screen_capture">Forced screenshot</string>
+    <string name="forced_screen_capture_summary">Enable screenshots to be taken in certain scenarios.</string>
     <string name="unlock_game_fps">Unlock game frame</string>
+    <string name="unlock_game_fps_summary">Remove the game lock 60FPS restriction for non-Meizu 20/Pro Meizu users</string>
     <string name="press_unlock">Press the fingerprint button to unlock</string>
-  </resources>
+    <string name="press_unlock_summary">Similar to MIUI, press the fingerprint button to unlock.</string>
+</resources>

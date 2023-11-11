@@ -10,8 +10,6 @@ import com.xlp.flyme.extra.BuildConfig
 import com.xlp.flyme.extra.hook.modules.android.forcedScreenCapture.ForcedScreenCapture
 import com.xlp.flyme.extra.hook.modules.android.unlockGameFps.UnlockGameFps
 import com.xlp.flyme.extra.hook.modules.settings.cipherDiskVibrator.CipherDiskVibrator
-import com.xlp.flyme.extra.hook.modules.settings.hideIMEI.HideIMEI
-import com.xlp.flyme.extra.hook.modules.settings.hideSerialNumber.HideSerialNumber
 import com.xlp.flyme.extra.hook.modules.settings.pressUnlock.PressUnlock
 import com.xlp.flyme.extra.hook.modules.systemUI.appShade.AppShade
 import com.xlp.flyme.extra.hook.modules.systemUI.blur.SupportBlur
@@ -50,8 +48,6 @@ class HookEntry : IYukiHookXposedInit {
         }
         loadApp(name = "com.android.settings") {
             loadHooker(CipherDiskVibrator)
-            loadHooker(HideIMEI)
-            loadHooker(HideSerialNumber)
         }
         loadApp(name = "com.flyme.systemuiex") {
             loadHooker(ForcedScreenCapture2)
