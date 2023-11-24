@@ -6,5 +6,6 @@
         <item>com.flyme.systemuiex</item>
         <item>com.android.settings</item>
         <item>com.android.packageinstaller</item>
+        <item>com.flyme.systemuieditor</item>
     </string-array>
 </resources>

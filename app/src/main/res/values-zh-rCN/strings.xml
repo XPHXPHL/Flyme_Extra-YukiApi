@@ -41,6 +41,7 @@
     <string name="settings_page">设置界面</string>
     <string name="cipher_disk_vibrator">密码盘震动</string>
     <string name="hide_imei_sn">隐藏IMEI和序列号</string>
+    <string name="lift_the_limit_on_the_number_of_lock_screen_plug_ins">解除锁屏插件数量限制</string>
 
     <string name="android_page">系统框架</string>
     <string name="forced_screen_capture">强制截图</string>

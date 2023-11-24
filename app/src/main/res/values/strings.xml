@@ -40,6 +40,7 @@
     <string name="settings_page">Settings Page</string>
     <string name="cipher_disk_vibrator">Password disk vibrates</string>
     <string name="hide_imei_sn">Hide IMEI and Sn</string>
+    <string name="lift_the_limit_on_the_number_of_lock_screen_plug_ins">Lift the limit on the number of lock screen plug-ins</string>
 
     <string name="android_page">Android Pages</string>
     <string name="forced_screen_capture">Forced screenshot</string>
