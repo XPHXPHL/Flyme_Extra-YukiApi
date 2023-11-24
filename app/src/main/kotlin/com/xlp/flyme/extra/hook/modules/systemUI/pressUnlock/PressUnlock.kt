@@ -1,4 +1,4 @@
-package com.xlp.flyme.extra.hook.modules.settings.pressUnlock
+package com.xlp.flyme.extra.hook.modules.systemUI.pressUnlock
 
 import android.annotation.SuppressLint
 import android.content.Context
