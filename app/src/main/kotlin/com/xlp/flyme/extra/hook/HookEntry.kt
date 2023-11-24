@@ -12,7 +12,7 @@ import com.xlp.flyme.extra.hook.modules.android.unlockGameFps.UnlockGameFps
 import com.xlp.flyme.extra.hook.modules.settings.cipherDiskVibrator.CipherDiskVibrator
 import com.xlp.flyme.extra.hook.modules.settings.hideIMEI.HideIMEI
 import com.xlp.flyme.extra.hook.modules.settings.hideSerialNumber.HideSerialNumber
-import com.xlp.flyme.extra.hook.modules.settings.pressUnlock.PressUnlock
+import com.xlp.flyme.extra.hook.modules.systemUI.pressUnlock.PressUnlock
 import com.xlp.flyme.extra.hook.modules.systemUI.appShade.AppShade
 import com.xlp.flyme.extra.hook.modules.systemUI.blur.SupportBlur
 import com.xlp.flyme.extra.hook.modules.systemUI.clipboardEditor.ClipboardEditor
@@ -20,6 +20,7 @@ import com.xlp.flyme.extra.hook.modules.systemUI.vibrator.back.BackVibrator
 import com.xlp.flyme.extra.hook.modules.systemUI.vibrator.face.FaceVibrator
 import com.xlp.flyme.extra.hook.modules.systemUI.vibrator.fingerprint.FingerprintVibrator
 import com.xlp.flyme.extra.hook.modules.systemUIex.forcedScreenCapture.ForcedScreenCapture2
+import com.xlp.flyme.extra.hook.modules.systemuieditor.fuckLimit.FuckLimit
 
 @InjectYukiHookWithXposed
 class HookEntry : IYukiHookXposedInit {
@@ -55,6 +56,9 @@ class HookEntry : IYukiHookXposedInit {
         }
         loadApp(name = "com.flyme.systemuiex") {
             loadHooker(ForcedScreenCapture2)
+        }
+        loadApp(name = "com.flyme.systemuieditor"){
+            loadHooker(FuckLimit)
         }
         YLog.saveToFile("/sdcard/Documents/YukiApi-Flyme_Extra-Debug_Log.log")
     }
