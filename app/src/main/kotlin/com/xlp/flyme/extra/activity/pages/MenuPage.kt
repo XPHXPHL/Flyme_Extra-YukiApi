@@ -73,6 +73,7 @@ class MenuPage : BasePage() {
                         "killall com.flyme.systemuiex",
                         "killall com.android.settings",
                         "killall com.android.packageinstaller",
+                        "killall com.flyme.systemuieditor"
                     )
                     execShell(command)
                     Toast.makeText(
