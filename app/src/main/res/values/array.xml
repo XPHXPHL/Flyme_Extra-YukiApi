@@ -7,5 +7,6 @@
         <item>com.android.settings</item>
         <item>com.android.packageinstaller</item>
         <item>com.flyme.systemuieditor</item>
+        <item>com.flyme.systemuitools</item>
     </string-array>
 </resources>
