@@ -34,8 +34,9 @@
     <string name="systemui_page">SystemUI Page</string>
     <string name="blur_enabled">Blurred notifications</string>
     <string name="clock_seconds">Time display seconds</string>
-      <string name="app_shade">Software startup mask</string>
+    <string name="app_shade">Software startup mask</string>
     <string name="clipboard_editor">Clipboard editor</string>
+    <string name="marble_rate">Marble Rate</string>
 
     <string name="settings_page">Settings Page</string>
     <string name="cipher_disk_vibrator">Password disk vibrates</string>

@@ -68,7 +68,8 @@ class MainPage : BasePage() {
         viewToInput(perfKey = "vibrator_face", effectKey = "vibrator_effect_id_face", textSummaryWithSwitchTextId = R.string.vibrator_face, textSummaryVTextId = R.string.vibrator_effect_face, setTitle = R.string.vibrator_effect_face)
         viewToInput(perfKey = "vibrator_fingerprint", effectKey = "vibrator_effect_id_fingerprint", textSummaryWithSwitchTextId = R.string.vibrator_fingerprint, textSummaryVTextId = R.string.vibrator_effect_fingerprint, setTitle = R.string.vibrator_effect_fingerprint)
         viewToInput(perfKey = "vibrator_back", effectKey = "vibrator_effect_id_back", textSummaryWithSwitchTextId = R.string.vibrator_back, textSummaryVTextId = R.string.vibrator_effect_back, setTitle = R.string.vibrator_effect_back)
-
+        val prop = execShell("getprop ro.product.vendor.device").toString()
+        if (prop == "marble" || prop == "munch") { TextSummaryWithSwitch(TextSummaryV(textId = R.string.marble_rate), SwitchV("marble_rate")) }
         TextSummaryWithArrow(
             TextSummaryV(textId = R.string.vibrator_effect, onClickListener = {
                 MIUIDialog(activity) {

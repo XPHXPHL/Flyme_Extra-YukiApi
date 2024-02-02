@@ -37,6 +37,7 @@
     <string name="clock_seconds">时间显秒</string>
     <string name="app_shade">软件启动遮罩</string>
     <string name="clipboard_editor">剪切板编辑器</string>
+    <string name="marble_rate">游戏时提升触控采样率</string>
 
     <string name="settings_page">设置界面</string>
     <string name="cipher_disk_vibrator">密码盘震动</string>
