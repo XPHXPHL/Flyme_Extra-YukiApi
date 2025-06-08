@@ -1,13 +1,5 @@
 name: Android CI
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-  schedule:
-    - cron: "0 0 */7 * *"
-  workflow_dispatch:
 
 jobs:
   build:
